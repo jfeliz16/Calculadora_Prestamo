@@ -1,0 +1,5 @@
+<resources>
+    <string name="msg_1">Fecha prestamo invalida</string>
+    <string name="msg_2">Monto Préstamo debe ser mayor que cero</string>
+    <string name="msg_3">Plazo debe ser mayor que cero</string>
+</resources>

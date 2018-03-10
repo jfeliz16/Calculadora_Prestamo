@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Calculadora Préstamos</string>
+    <string name="calcular">Calcular</string>
+    <string name="tasa_interes">Tasa Interes</string>
+    <string name="monto">Monto</string>
+    <string name="h_monto_prestamo">Monto Préstamo</string>
+    <string name="h_interes_anual">% Interés (Anual)</string>
+    <string name="h_plazo">Plazo (Meses)</string>
+    <string name="interes_mensual">% Interés (Mensual)</string>
+    <string name="monto_cuota">Monto Cuota:</string>
+    <string name="total_interes">Total Interés:</string>
+    <string name="total_a_pagar">Total a Pagar:</string>
+    <string name="tasa_interes_anual">Tasa Interés</string>
+    <string name="monto_prestamo">Monto Préstamo</string>
+    <string name="porciento_mensual">%(Mensual)</string>
+    <string name="porciento_anual">%(Anual)</string>
+    <string name="plazo">Plazo</string>
+    <string name="fecha_inicio_prestamo">Fecha Inicio</string>
+    <string name="fecha_ultimo_pago">Fecha Último Pago:</string>
+    <string name="interes_tbl_amort">Interés</string>
+    <string name="total_tbl_amort">Total</string>
+    <string name="capital_tbl_amort">Capital</string>
+    <string name="saldo_tbl_amort">Saldo</string>
+    <string name="fecha_tbl_amort">Fecha</string>
+</resources>

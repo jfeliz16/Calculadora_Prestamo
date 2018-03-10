@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/numeroCuota"
+        style="@style/colDetalleTablaAmort"
+        android:gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/fechaCuota"
+        style="@style/colDetalleTablaAmort"
+        android:gravity="left"
+        />
+
+    <TextView
+        android:id="@+id/saldoCuota"
+        style="@style/colDetalleTablaAmort"
+        android:gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/capitalCuota"
+        style="@style/colDetalleTablaAmort"
+        android:gravity="right"
+       />
+
+    <TextView
+        android:id="@+id/interesCuota"
+        style="@style/colDetalleTablaAmort"
+        android:gravity="right"
+     />
+
+    <TextView
+        android:id="@+id/montoCuota"
+        style="@style/colDetalleTablaAmort"
+        android:gravity="right"
+      />
+
+</TableRow>

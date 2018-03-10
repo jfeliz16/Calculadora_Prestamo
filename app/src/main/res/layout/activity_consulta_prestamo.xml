@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.flsoluction.prestamos.ConsultaPrestamoActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewEtiquetaResultado"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/app"
+            android:gravity="center"
+            android:text="Resultado"
+            android:textColor="#fafafa"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlazoValor" />
+
+        <TextView
+            android:id="@+id/textViewMontoCuota"
+            style="@style/labelConsultaPrestamo"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/monto_cuota"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEtiquetaResultado"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/textViewMontoCuotaValor"
+            style="@style/labelConsultaPrestamoValor"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="20,500.00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEtiquetaResultado"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/textViewTotalInteres"
+            style="@style/labelConsultaPrestamo"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/total_interes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMontoCuota"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/textViewTotalInteresValor"
+            style="@style/labelConsultaPrestamoValor"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="1,000,000.00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMontoCuotaValor" />
+
+        <TextView
+            android:id="@+id/textViewTotalPagar"
+            style="@style/labelConsultaPrestamo"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/total_a_pagar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalInteres"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/textViewTotalPagarValor"
+            style="@style/labelConsultaPrestamoValor"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="1,020,500.00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalInteresValor" />
+
+        <TextView
+            android:id="@+id/textViewMontoPrestamo"
+            style="@style/labelConsultaPrestamoSm"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/monto_prestamo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/textViewTasa"
+            style="@style/labelConsultaPrestamoSm"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tasa_interes_anual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="76dp" />
+
+        <TextView
+            android:id="@+id/textViewMontoPrestamoValor"
+            style="@style/labelConsultaPrestamoValorSm"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="50,000.00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMontoPrestamo" />
+
+        <TableLayout
+            android:id="@+id/tableLayoutTablaAmort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFechaUltCuota">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app">
+
+                <TextView
+                    style="@style/colEncabezadoTablaAmort"
+                    android:gravity="right"
+                    android:text="#"
+                    />
+
+                <TextView
+                    style="@style/colEncabezadoTablaAmort"
+                    android:gravity="left"
+                    android:text="@string/fecha_tbl_amort"
+                     />
+
+                <TextView
+                    style="@style/colEncabezadoTablaAmort"
+                    android:gravity="right"
+                    android:text="@string/saldo_tbl_amort"
+                    />
+
+                <TextView
+                    style="@style/colEncabezadoTablaAmort"
+                    android:gravity="right"
+                    android:text="@string/capital_tbl_amort"
+                     />
+
+                <TextView
+                    style="@style/colEncabezadoTablaAmort"
+                    android:gravity="right"
+                    android:text="@string/interes_tbl_amort"
+                    />
+
+                <TextView
+                    style="@style/colEncabezadoTablaAmort"
+                    android:gravity="right"
+                    android:text="@string/total_tbl_amort"
+                    />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textViewIntAnual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/porciento_anual"
+            app:layout_constraintEnd_toStartOf="@+id/textViewIntAnualValor"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTasa"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/textViewIntAnualValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:text="100"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewIntMen"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTasa"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:id="@+id/textViewIntMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/porciento_mensual"
+            app:layout_constraintEnd_toStartOf="@+id/textViewIntMenValor"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTasa"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/textViewIntMenValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:text="100"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTasa"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/textViewPlazo"
+            style="@style/labelConsultaPrestamoSm"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/plazo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMontoPrestamoValor" />
+
+        <TextView
+            android:id="@+id/textViewPlazoValor"
+            style="@style/labelConsultaPrestamoValorSm"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlazo" />
+
+        <TextView
+            android:id="@+id/textViewFecha"
+            style="@style/labelConsultaPrestamoSm"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/fecha_inicio_prestamo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIntMen"
+            android:layout_marginRight="76dp" />
+
+        <TextView
+            android:id="@+id/textViewFechaValor"
+            style="@style/labelConsultaPrestamoValorSm"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:layout_marginTop="8dp"
+            android:text="08 marzo 2018"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFecha"
+            android:layout_marginRight="76dp" />
+
+        <TextView
+            android:id="@+id/textViewFechaUltCuota"
+            style="@style/labelConsultaPrestamo"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/fecha_ultimo_pago"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalPagar"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/textViewFechaUltCuotaValor"
+            style="@style/labelConsultaPrestamoValor"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="8 marzo 2019"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalPagarValor" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</ScrollView>
